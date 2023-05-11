@@ -1,0 +1,3 @@
+yarn eslint "**/*.{js,jsx}" --fix
+
+yarn stylelint "**/*.{css,scss}" --fix
