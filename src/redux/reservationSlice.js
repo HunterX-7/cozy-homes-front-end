@@ -1,16 +1,16 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const FETCH_HOUSE = 'Cozy-homes-front-end/houses/FETCH_HOUSES';
-const ADD_HOUSE = 'Cozy-homes-front-end/houses/ADD_HOUSE';
-const DELETE_HOUSE = 'Cozy-homes-front-end/houses/DELETE_HOUSE';
+const FETCH_RESERVATION = 'Cozy-homes-front-end/houses/FETCH_RESERVATION';
+const ADD_RESERVATION = 'Cozy-homes-front-end/houses/ADD_RESERVATION';
+const DELETE_RESERVATION = 'Cozy-homes-front-end/houses/DELETE_RESERVATION';
 
-export const fetchHouses = createAsyncThunk(FETCH_HOUSE, async () => {
+export const fetchReservation = createAsyncThunk(FETCH_RESERVATION, async () => {
   const response = await fetch('http://localhost:3000/api/v1/houses');
   const data = await response.json();
   return data;
 });
 
-export const addHouse = createAsyncThunk(ADD_HOUSE, async (house) => {
+export const addHouse = createAsyncThunk(ADD_RESERVATION, async (house) => {
   const response = await fetch('http://localhost:3000/api/v1/houses', {
     method: 'POST',
     headers: {
@@ -26,7 +26,7 @@ export const addHouse = createAsyncThunk(ADD_HOUSE, async (house) => {
 });
 
 export const deleteHouse = createAsyncThunk(
-  DELETE_HOUSE,
+  DELETE_RESERVATION,
   async (id) => {
     await fetch(`http://localhost:3000/api/v1/houses/${id}`, {
       method: 'DELETE',
@@ -46,7 +46,7 @@ const houseSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchHouses.fulfilled, (state, action) => {
+      .addCase(fetchReservation.fulfilled, (state, action) => {
         state.property = action.payload;
       })
       .addCase(addHouse.fulfilled, (state, action) => {
