@@ -4,7 +4,6 @@ import HouseRemoveItem from './HouseRemoveItem';
 
 const RemoveHouseList = (props) => {
   const { data } = props;
-  console.log(data);
   return (
     <div className="group">
       {data.map((house) => {
