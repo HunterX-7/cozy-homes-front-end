@@ -46,7 +46,7 @@ const houseSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchHouses.fulfilled, (state, action) => {
+      .addCase(fetchReservation.fulfilled, (state, action) => {
         state.property = action.payload;
       })
       .addCase(addHouse.fulfilled, (state, action) => {
