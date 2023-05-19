@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchHouses } from '../redux/houseSlice';
 import RemoveHouseList from './RemoveHouseList';
-import NavBar from './NavBar';
 
 const RemoveHouse = () => {
   const houses = useSelector((state) => state.house.property);
@@ -15,12 +14,10 @@ const RemoveHouse = () => {
   return (
 
     <div>
-      <NavBar />
-      <div>
-        <RemoveHouseList
-          data={houses}
-        />
-      </div>
+      <RemoveHouseList
+        data={houses}
+      />
+
     </div>
   );
 };
