@@ -2,61 +2,48 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const FETCH_RESERVATION = 'Cozy-homes-front-end/houses/FETCH_RESERVATION';
 const ADD_RESERVATION = 'Cozy-homes-front-end/houses/ADD_RESERVATION';
-const DELETE_RESERVATION = 'Cozy-homes-front-end/houses/DELETE_RESERVATION';
 
-export const fetchReservation = createAsyncThunk(FETCH_RESERVATION, async () => {
-  const response = await fetch('http://localhost:3000/api/v1/houses');
+export const fetchReservation = createAsyncThunk(FETCH_RESERVATION, async (user) => {
+  const response = await fetch(`http://localhost:3000/api/v1/reservations/${user.name}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
   const data = await response.json();
   return data;
 });
 
-export const addHouse = createAsyncThunk(ADD_RESERVATION, async (house) => {
-  const response = await fetch('http://localhost:3000/api/v1/houses', {
+export const addReservation = createAsyncThunk(ADD_RESERVATION, async (reservation) => {
+  const response = await fetch('http://localhost:3000/api/v1/reservations', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(house),
+    body: JSON.stringify(reservation),
   });
   if (!response.ok) {
-    throw new Error('Error adding a house');
+    throw new Error('Error adding a reservation');
   }
   const data = await response.json();
   return data;
 });
 
-export const deleteHouse = createAsyncThunk(
-  DELETE_RESERVATION,
-  async (id) => {
-    await fetch(`http://localhost:3000/api/v1/houses/${id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    return id;
-  },
-);
-
-const houseSlice = createSlice({
-  name: 'house',
+const reservationSlice = createSlice({
+  name: 'reservation',
   initialState: {
-    property: [],
+    reservation: [],
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchReservation.fulfilled, (state, action) => {
-        state.property = action.payload;
+        state.reservation = action.payload;
       })
-      .addCase(addHouse.fulfilled, (state, action) => {
-        state.property.push(action.payload);
-      })
-      .addCase(deleteHouse.fulfilled, (state, action) => {
-        const id = action.payload;
-        state.property = state.property.filter((house) => house.id !== id);
+      .addCase(addReservation.fulfilled, (state, action) => {
+        state.reservation.push(action.payload);
       });
   },
 });
 
-export default houseSlice.reducer;
+export default reservationSlice.reducer;
