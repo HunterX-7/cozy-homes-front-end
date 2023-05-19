@@ -7,9 +7,10 @@ import Houses from './pages/Houses';
 import Details from './pages/Details';
 import AddHouse from './components/AddHouse';
 import RemoveHouse from './components/RemoveHouse';
-import Reserve from './components/Reserve';
 import SplashLogin from './components/SplashLogin';
 import SplashSignup from './components/SplashSignup';
+import Reservations from './components/Reservations';
+import AddReservation from './components/Reserve';
 import Navbar from './components/NavBar';
 
 const App = () => {
@@ -56,7 +57,8 @@ const App = () => {
         <Route path="/details/:name" element={<Details />} />
         <Route path="/add" element={<AddHouse />} />
         <Route path="/remove" element={<RemoveHouse />} />
-        <Route path="/reserve" element={<Reserve SessionStatus={SessionStatus} />} />
+        <Route path="/reserve" element={<AddReservation SessionStatus={SessionStatus} />} />
+        <Route path="/reservations" element={<Reservations SessionStatus={SessionStatus} />} />
       </Routes>
     </div>
   );
