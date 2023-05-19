@@ -6,7 +6,7 @@ const HouseItem = (props) => {
   const { name, location, photo } = props;
 
   return (
-    <Link to={`details/${name}`} className="text">
+    <Link to={`/details/${name}`} className="text">
       <div className="card" id="flex">
         <img src={photo} alt="house" width="180px" height="130px" />
         <div className="info">
