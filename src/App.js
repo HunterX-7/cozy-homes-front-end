@@ -8,6 +8,9 @@ import Details from './pages/Details';
 import AddHouse from './components/AddHouse';
 import RemoveHouse from './components/RemoveHouse';
 import Reserve from './components/Reserve';
+import SplashLogin from './components/SplashLogin';
+import SplashSignup from './components/SplashSignup';
+import Reservations from './components/Reservations';
 import Navbar from './components/NavBar';
 
 const App = () => {
@@ -48,11 +51,14 @@ const App = () => {
     <div>
       {location.pathname !== '/' && location.pathname !== '/signup' && <Navbar handleLogout={handleLogout} />}
       <Routes>
+        <Route path="/" element={<SplashLogin SessionStatus={SessionStatus} />} />
+        <Route path="/signup" element={<SplashSignup SessionStatus={SessionStatus} />} />
         <Route path="/home" element={<Houses />} />
         <Route path="/details/:name" element={<Details />} />
         <Route path="/add" element={<AddHouse />} />
         <Route path="/remove" element={<RemoveHouse />} />
         <Route path="/reserve" element={<Reserve SessionStatus={SessionStatus} />} />
+        <Route path="/reservations" element={<Reservations SessionStatus={SessionStatus} />} />
       </Routes>
     </div>
   );
