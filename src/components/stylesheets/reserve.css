@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .content {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .select_house,
+  input,
+  button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .status-notification {
+    margin-top: 20px;
+    color: #ff0000;
+  }
+  
+  .reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed; /* Ensure equal column size */
+  }
+  
+  .reservation-table th,
+  .reservation-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .reservation-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .reservation-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .reservation-table tbody tr:hover {
+    background-color: #eaeaea;
+  }
+  
+  @media screen and (max-width: 680px) {
+    .content {
+      max-width: 100%;
+    }
+  
+    .form-container {
+      padding: 0 10px;
+    }
+  
+    .select_house,
+    input,
+    button {
+      margin-bottom: 15px;
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .reservation-table th,
+    .reservation-table td {
+      padding: 6px;
+    }
+  
+    .header {
+      font-size: 18px;
+      padding: 8px;
+    }
+  }
+  
