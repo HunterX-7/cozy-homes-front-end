@@ -68,6 +68,7 @@ const AddReservations = (props) => {
     if (data.status === 'created') {
       setStatus('House reserved successfully');
       document.querySelector('select').value = '';
+      navigate('/reservations');
     } else {
       setStatus('enter a valid format for start/end dates "dd/mm/yyyy". please ensure that StartDate is earlier than endDate ');
       setStartDate('');
