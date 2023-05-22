@@ -11,7 +11,8 @@ import SplashLogin from './components/SplashLogin';
 import SplashSignup from './components/SplashSignup';
 import Reservations from './components/Reservations';
 import AddReservation from './components/Reserve';
-import Navbar from './components/NavBar';
+import SideBar from './components/SideBar';
+import NavBar from './components/NavBar';
 
 const App = () => {
   const navigate = useNavigate();
@@ -48,9 +49,13 @@ const App = () => {
   };
 
   return (
-
-    <div>
-      {location.pathname !== '/' && location.pathname !== '/signup' && <Navbar handleLogout={handleLogout} />}
+    <>
+      <div className="d-lg-none p-0">
+        {location.pathname !== '/' && location.pathname !== '/signup' && <NavBar handleLogout={handleLogout} />}
+      </div>
+      <div className="col-lg-3 d-none d-lg-block p-0">
+        {location.pathname !== '/' && location.pathname !== '/signup' && <SideBar handleLogout={handleLogout} />}
+      </div>
       <Routes>
         <Route path="/" element={<SplashLogin SessionStatus={SessionStatus} />} />
         <Route path="/signup" element={<SplashSignup SessionStatus={SessionStatus} />} />
@@ -61,7 +66,7 @@ const App = () => {
         <Route path="/reserve" element={<AddReservation SessionStatus={SessionStatus} />} />
         <Route path="/reservations" element={<Reservations SessionStatus={SessionStatus} />} />
       </Routes>
-    </div>
+    </>
   );
 };
 export default App;
