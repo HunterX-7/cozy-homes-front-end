@@ -4,8 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { func } from 'prop-types';
 import { addHouse } from '../redux/houseSlice';
 
-/* import '../styles/add_motorcycle.css'; */
-
 const Form = () => {
   const [name, setName] = useState('');
   const [style, setStyle] = useState('');
@@ -170,7 +168,13 @@ const AddHouse = (props) => {
 
   return (
 
-    <div className="">
+    <div className="col-lg-8 p-0">
+      <div className="col-12">
+        <div className="box" />
+      </div>
+      <div className="col-12">
+        <div className="box" />
+      </div>
       <h2 className="models-title">ADD A NEW HOUSE</h2>
       <Form />
     </div>
