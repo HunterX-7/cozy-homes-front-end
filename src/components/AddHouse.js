@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { func } from 'prop-types';
 import { addHouse } from '../redux/houseSlice';
-
-/* import '../styles/add_motorcycle.css'; */
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -153,11 +152,37 @@ const Form = () => {
   );
 };
 
-const AddHouse = () => (
-  <div className="">
-    <h2 className="models-title">ADD A NEW HOUSE</h2>
-    <Form />
-  </div>
-);
+const AddHouse = (props) => {
+  const { SessionStatus } = props;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    (async () => {
+      const { isLoggedIn } = await SessionStatus();
+      if (!isLoggedIn) {
+        navigate('/');
+      }
+    })();
+  }, [dispatch, SessionStatus, navigate]);
+
+  return (
+
+    <div className="col-lg-8 p-0">
+      <div className="col-12">
+        <div className="box" />
+      </div>
+      <div className="col-12">
+        <div className="box" />
+      </div>
+      <h2 className="models-title">ADD A NEW HOUSE</h2>
+      <Form />
+    </div>
+  );
+};
 
 export default AddHouse;
+
+AddHouse.propTypes = {
+  SessionStatus: func.isRequired,
+};

@@ -8,10 +8,10 @@ const Details = () => {
 
   return (
 
-    <div className="detailscontainer">
+    <div className="col-lg-8 p-0">
       <h1>{house.name}</h1>
       <ul>
-        <li><img src={house.photo} alt="house_pic" /></li>
+        <li><img src={house.photo} alt="house_pic" className="d-block w-100 mb-2" /></li>
         <li>{house.description}</li>
         <li>
           Type:

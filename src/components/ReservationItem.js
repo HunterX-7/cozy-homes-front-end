@@ -1,20 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './stylesheets/reservations.css';
 
 const ReservationItem = (props) => {
   const {
     username, housename, location, startDate, endDate,
   } = props;
 
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString();
+  };
+
   return (
-    <table>
+    <table className="reservation-table">
       <thead>
         <tr>
-          <th>User name </th>
-          <th>House Name </th>
-          <th>Location </th>
-          <th>Start Date </th>
-          <th>End Date </th>
+          <th colSpan="5" className="table-header">
+            Reservation Details
+          </th>
+        </tr>
+        <tr>
+          <th>User name</th>
+          <th>House Name</th>
+          <th>Location</th>
+          <th>Start Date</th>
+          <th>End Date</th>
         </tr>
       </thead>
       <tbody>
@@ -22,13 +33,11 @@ const ReservationItem = (props) => {
           <td>{username}</td>
           <td>{housename}</td>
           <td>{location}</td>
-          <td>{startDate}</td>
-          <td>{endDate}</td>
+          <td>{formatDate(startDate)}</td>
+          <td>{formatDate(endDate)}</td>
         </tr>
-
       </tbody>
     </table>
-
   );
 };
 

@@ -1,19 +1,36 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router';
+import { func } from 'prop-types';
 import { fetchHouses } from '../redux/houseSlice';
 import RemoveHouseList from './RemoveHouseList';
 
-const RemoveHouse = () => {
+const RemoveHouse = (props) => {
+  const { SessionStatus } = props;
   const houses = useSelector((state) => state.house.property);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(fetchHouses());
-  }, [dispatch]);
+    (async () => {
+      const { isLoggedIn } = await SessionStatus();
+      if (isLoggedIn) {
+        dispatch(fetchHouses());
+      } else {
+        navigate('/');
+      }
+    })();
+  }, [dispatch, SessionStatus, navigate]);
 
   return (
 
-    <div>
+    <div className="col-lg-8 p-0">
+      <div className="col-12">
+        <div className="box" />
+      </div>
+      <div className="col-12">
+        <div className="box" />
+      </div>
       <RemoveHouseList
         data={houses}
       />
@@ -23,3 +40,7 @@ const RemoveHouse = () => {
 };
 
 export default RemoveHouse;
+
+RemoveHouse.propTypes = {
+  SessionStatus: func.isRequired,
+};
