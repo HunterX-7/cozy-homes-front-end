@@ -77,18 +77,23 @@ const AddReservations = (props) => {
   };
 
   return (
-    <div className="container">
+    <div className="contenedor col-lg-8 p-0">
       <div className="content">
         <div className="header">
           <h3>RESERVE A HOUSE</h3>
           <span className="line" />
         </div>
         <p className="description">
-          Discover the epitome of luxury living with our exquisite rental homes.
-          Experience a world of opulence and refinement, where every detail has been
-          meticulously designed to exceed your expectations. From breathtaking
-          architecture to lavish amenities, our luxury houses offer a lifestyle of
-          unparalleled elegance.
+          Embark on a journey of unrivaled luxury as you step into
+          our extraordinary collection of rental homes.
+          Prepare to be captivated by a world of refinement and elegance,
+          where every aspect has been thoughtfully curated to
+          surpass even the loftiest of expectations.
+          Immerse yourself in awe-inspiring architectural masterpieces
+          and indulge in lavish amenities, as our opulent residences
+          offer a lifestyle that epitomizes pure extravagance.
+          Experience a new standard of sophistication and elevate your
+          living to extraordinary heights.
         </p>
         <form className="form-container" onSubmit={handleSubmit}>
           <select id="houses" name="houses" className="select_house mt-3" onChange={handleHouseChange} required>

@@ -24,7 +24,13 @@ const RemoveHouse = (props) => {
 
   return (
 
-    <div>
+    <div className="col-lg-8 p-0">
+      <div className="col-12">
+        <div className="box" />
+      </div>
+      <div className="col-12">
+        <div className="box" />
+      </div>
       <RemoveHouseList
         data={houses}
       />
