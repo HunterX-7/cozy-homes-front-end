@@ -48,15 +48,16 @@ const App = () => {
   };
 
   return (
+
     <div>
       {location.pathname !== '/' && location.pathname !== '/signup' && <Navbar handleLogout={handleLogout} />}
       <Routes>
         <Route path="/" element={<SplashLogin SessionStatus={SessionStatus} />} />
         <Route path="/signup" element={<SplashSignup SessionStatus={SessionStatus} />} />
-        <Route path="/home" element={<Houses />} />
+        <Route path="/home" element={<Houses SessionStatus={SessionStatus} />} />
         <Route path="/details/:name" element={<Details />} />
-        <Route path="/add" element={<AddHouse />} />
-        <Route path="/remove" element={<RemoveHouse />} />
+        <Route path="/add" element={<AddHouse SessionStatus={SessionStatus} />} />
+        <Route path="/remove" element={<RemoveHouse SessionStatus={SessionStatus} />} />
         <Route path="/reserve" element={<AddReservation SessionStatus={SessionStatus} />} />
         <Route path="/reservations" element={<Reservations SessionStatus={SessionStatus} />} />
       </Routes>
