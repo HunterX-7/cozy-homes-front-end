@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { func } from 'prop-types';
+import './stylesheets/SplashLogin.css';
+import Logo from './images/logo.png';
 
 const SplashLogin = (props) => {
   const { SessionStatus } = props;
@@ -60,23 +62,26 @@ const SplashLogin = (props) => {
   };
 
   return (
-
-    <div className="form-container sign-in-container">
-      <form className="form" action="#" onSubmit={handleLogin}>
-        <div>
-          {user.errors.map((error) => (
-            <h3 className="error-notification" key={error}>{error}</h3>
-          ))}
-        </div>
-        <h1 className="form-title">Sign in</h1>
-        <div className="username-input-container">
-          <img src="" className="username-img" alt="username-icon" />
-          <input className="username-input" required type="name" placeholder="Username" name="name" value={name} onChange={handleChange} />
-        </div>
-        <button type="submit" className="splash-action-btn">Sign In</button>
-      </form>
+    <div className="container-page">
+      <div className="form-container-log sign-in-container">
+        <form className="form-log" action="#" onSubmit={handleLogin}>
+          <div>
+            {user.errors.map((error) => (
+              <h3 className="error-notification" key={error}>{error}</h3>
+            ))}
+          </div>
+          <img className="logo-signin" src={Logo} alt="logo" />
+          <div className="username-input-container">
+            <div className="border-grey">
+              <div className="border-green">
+                <input className="username-input" required type="name" placeholder="Username" name="name" value={name} onChange={handleChange} />
+              </div>
+            </div>
+          </div>
+          <button type="submit" className="splash-action-btn">Sign In</button>
+        </form>
+      </div>
     </div>
-
   );
 };
 
