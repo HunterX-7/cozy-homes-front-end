@@ -4,7 +4,7 @@ import './stylesheets/reservations.css';
 
 const ReservationItem = (props) => {
   const {
-    username, housename, location, startDate, endDate,
+    username, housename, startDate, endDate,
   } = props;
 
   const formatDate = (dateString) => {
@@ -17,7 +17,6 @@ const ReservationItem = (props) => {
       <tr>
         <td>{username}</td>
         <td>{housename}</td>
-        <td>{location}</td>
         <td>{formatDate(startDate)}</td>
         <td>{formatDate(endDate)}</td>
       </tr>
@@ -30,7 +29,6 @@ export default ReservationItem;
 ReservationItem.propTypes = {
   username: PropTypes.string.isRequired,
   housename: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired,
 };

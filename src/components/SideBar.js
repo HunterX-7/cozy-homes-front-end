@@ -50,7 +50,7 @@ const SideBar = (props) => {
         </Nav.Link>
       </ul>
 
-      <div className="h4 w-100 text-center">
+      <div className="h4 w-100 mb-5 text-center">
         <a
           href="https://github.com/HunterX-7/cozy-homes-front-end/tree/homepage-design"
           target="_blank"

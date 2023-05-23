@@ -5,6 +5,7 @@ import { func } from 'prop-types';
 import { fetchReservation } from '../redux/reservationSlice';
 import ReservationsList from './ReservationsList';
 import reservationLogo from './images/reservation.png';
+import './stylesheets/reservations.css';
 
 const Reservations = (props) => {
   const { SessionStatus } = props;
@@ -25,32 +26,34 @@ const Reservations = (props) => {
 
   return (
 
-    <div className="col-lg-8 p-0">
+    <div className="container col-lg-8 p-0">
       <div className="col-12">
         <div className="box" />
       </div>
-      <div className="col-12">
+      <div className="d-none d-lg-block col-12">
         <div className="box" />
       </div>
-      <table className="reservation-table">
-        <thead>
-          <tr className="table-header">
-            <th colSpan="5">
-              <img src={reservationLogo} alt="Reservation Logo" className="reservation-lg" />
-            </th>
-          </tr>
-          <tr>
-            <th className="title-table">User name</th>
-            <th className="title-table">House Name</th>
-            <th className="title-table">Location</th>
-            <th className="title-table">Start Date</th>
-            <th className="title-table">End Date</th>
-          </tr>
-        </thead>
-        <ReservationsList
-          ReservationsData={reserves}
-        />
-      </table>
+      <div className="">
+        <table className="table table-striped table-sm table-hover">
+          <thead>
+            <tr className="table-header">
+              <th colSpan="4">
+                <img src={reservationLogo} alt="Reservation Logo" className="w-25" />
+              </th>
+            </tr>
+            <tr>
+              <th className="title-table">Name</th>
+              <th className="title-table">House</th>
+              <th className="title-table">Start Date</th>
+              <th className="title-table">End Date</th>
+            </tr>
+          </thead>
+          <ReservationsList
+            ReservationsData={reserves}
+          />
+        </table>
+      </div>
+
     </div>
 
   );
