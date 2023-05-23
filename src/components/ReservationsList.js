@@ -2,15 +2,18 @@ import React from 'react';
 import PropTypes, { shape } from 'prop-types';
 import ReservationItem from './ReservationItem';
 
+
 const ReservationsList = (props) => {
   const { ReservationsData } = props;
   return (
-    <div className="group">
+      <>
       {ReservationsData.map((res) => {
         const {
           id, user, house, startDate, endDate,
         } = res;
         return (
+
+
           <ReservationItem
             key={id}
             housename={house.name}
@@ -21,7 +24,7 @@ const ReservationsList = (props) => {
           />
         );
       })}
-    </div>
+      </>
   );
 };
 
