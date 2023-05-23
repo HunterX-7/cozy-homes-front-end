@@ -31,7 +31,7 @@ const HouseCarousel = (props) => {
         return (
           <SwiperSlide key={id}>
             <Link to={`/details/${name}`} className="text">
-              <img src={photo} alt={name} className="d-block w-100 mb-2" />
+              <img src={photo} alt={name} className="d-block shadow-lg rounded w-100 mb-2" />
             </Link>
             <div className="swiper-caption">
               <h3 className="text-center">{name}</h3>
