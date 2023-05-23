@@ -1,60 +1,150 @@
-.main_cont{
-background-image: url("../images/reserve-bg.png");
-background-repeat: no-repeat;
-background-size: cover;
-height: 100vh;
-width:100%;
+.main_cont {
+  background-image: url("../images/reserve-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.home-button{
+.sides {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 50px 20% 50px 20%;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 50px 0 50px 0;
+}
+
+.home-button {
   padding: 3%;
-  display:block;
+  display: block;
 }
 
-.internal_cont{
+.internal_cont {
   display: flex;
   margin-right: 0;
   padding: 0;
   flex-direction: column;
-  width: 90%;
-  justify-content: center;
   align-content: center;
   text-align: center;
-
 }
 
+.logotype {
+  width: 37%;
+  height: 100%;
+  align-self: center;
+  padding: 2px 0 30px 0;
+}
 
-.logo{
-  width: 200px;
-  height: 100px;
+.house-form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: start;
+  background-color: rgba(28, 35, 49, 0.7);
+  padding: 30px 30px 30px 30px;
+  margin: 0 auto 0 auto;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.form-item {
+  width: 100%;
+}
+
+.house-input {
+  background-color: white;
+  font-size: large;
+  color: black;
+  border: none;
+  padding: 4px 10px 4px 10px;
+}
+
+.house-input-name {
+  width: 100%;
+  background-color: white;
+  font-size: large;
+  color: black;
+  border: none;
+  padding: 4px 80% 4px 10px;
+  box-sizing: border-box;
+}
+
+.border-grey {
+  width: 100%;
+  background-color: #a6a6a6;
+  padding: 3px;
+  border-radius: 20px;
+}
+
+.border-green {
+  background-color: #004d40;
+  padding: 8px;
+  border-radius: 19px;
+}
+
+.border-grey-text {
+  width: 70%;
+  background-color: #a6a6a6;
+  padding: 5px;
+  justify-content: center;
   align-self: center;
 }
 
-.house-form{
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  border: 2px solid white;
-  justify-items: center;
-  align-content: center;
-  text-align: start;
-  
-}
-
-.form-item{
-  color: white;
-  text-align: start;
-  width: 40%
-}
-.house_gif{
-  width: 100px;
-  height:50px; 
-}
-
-.house-input{
-  background-color: transparent;
+.text-area {
+  width: 100%;
+  background-color: white;
   font-size: large;
-  color: white;
+  color: black;
   border: none;
+  box-sizing: border-box;
+  text-align: center;
 }
 
+.border-green-text {
+  background-color: #004d40;
+  padding: 8px;
+}
+
+.border-grey-name {
+  width: 70%;
+  background-color: #a6a6a6;
+  padding: 5px;
+  border-radius: 20px;
+  justify-content: center;
+  align-self: center;
+}
+
+.button-add-house {
+  background: transparent;
+  color: #ffc359;
+  border: transparent;
+  margin-top: 30px;
+  align-self: center;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 50px 0 50px 0;
+  }
+}
