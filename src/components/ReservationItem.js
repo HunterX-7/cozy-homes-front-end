@@ -13,21 +13,6 @@ const ReservationItem = (props) => {
   };
 
   return (
-    <table className="reservation-table">
-      <thead>
-        <tr>
-          <th colSpan="5" className="table-header">
-            Reservation Details
-          </th>
-        </tr>
-        <tr>
-          <th>User name</th>
-          <th>House Name</th>
-          <th>Location</th>
-          <th>Start Date</th>
-          <th>End Date</th>
-        </tr>
-      </thead>
       <tbody>
         <tr>
           <td>{username}</td>
@@ -37,7 +22,6 @@ const ReservationItem = (props) => {
           <td>{formatDate(endDate)}</td>
         </tr>
       </tbody>
-    </table>
   );
 };
 
