@@ -13,15 +13,15 @@ const ReservationItem = (props) => {
   };
 
   return (
-      <tbody>
-        <tr>
-          <td>{username}</td>
-          <td>{housename}</td>
-          <td>{location}</td>
-          <td>{formatDate(startDate)}</td>
-          <td>{formatDate(endDate)}</td>
-        </tr>
-      </tbody>
+    <tbody>
+      <tr>
+        <td>{username}</td>
+        <td>{housename}</td>
+        <td>{location}</td>
+        <td>{formatDate(startDate)}</td>
+        <td>{formatDate(endDate)}</td>
+      </tr>
+    </tbody>
   );
 };
 
