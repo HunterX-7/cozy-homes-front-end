@@ -54,7 +54,7 @@ const App = () => {
         {location.pathname !== '/' && location.pathname !== '/signup' && <NavBar handleLogout={handleLogout} />}
       </div>
       <div className="col-lg-3 d-none d-lg-block p-0">
-        {location.pathname !== '/' && location.pathname !== '/signup' && <SideBar handleLogout={handleLogout} />}
+        {location.pathname !== '/' && location.pathname !== '/signup' && location.pathname !== '/reserve' && location.pathname !== '/add' && <SideBar handleLogout={handleLogout} />}
       </div>
       <Routes>
         <Route path="/" element={<SplashLogin SessionStatus={SessionStatus} />} />

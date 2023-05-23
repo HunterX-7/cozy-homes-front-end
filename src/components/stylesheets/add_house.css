@@ -1,0 +1,60 @@
+.main_cont{
+background-image: url("../images/reserve-bg.png");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+width:100%;
+}
+
+.home-button{
+  padding: 3%;
+  display:block;
+}
+
+.internal_cont{
+  display: flex;
+  margin-right: 0;
+  padding: 0;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+
+}
+
+
+.logo{
+  width: 200px;
+  height: 100px;
+  align-self: center;
+}
+
+.house-form{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border: 2px solid white;
+  justify-items: center;
+  align-content: center;
+  text-align: start;
+  
+}
+
+.form-item{
+  color: white;
+  text-align: start;
+  width: 40%
+}
+.house_gif{
+  width: 100px;
+  height:50px; 
+}
+
+.house-input{
+  background-color: transparent;
+  font-size: large;
+  color: white;
+  border: none;
+}
+

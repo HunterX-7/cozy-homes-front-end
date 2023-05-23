@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { func } from 'prop-types';
+import { AiFillHome } from 'react-icons/ai';
 import { addHouse } from '../redux/houseSlice';
+import './stylesheets/add_house.css';
+import logo from './images/logo.png';
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -59,80 +62,141 @@ const Form = () => {
         onSubmit={addHousehandler}
         onReset={resetForm}
       >
-        <input
-          className="house-input"
-          required
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="house name"
-        />
-        <input
-          className="house-input"
-          required
-          type="text"
-          value={style}
-          onChange={(e) => setStyle(e.target.value)}
-          placeholder="house type"
-        />
-        <input
-          className="house-input"
-          required
-          type="text"
-          value={photo}
-          onChange={(e) => setPhoto(e.target.value)}
-          placeholder="image URL"
-        />
-        <input
-          className="house-input"
-          required
-          type="text"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-          placeholder="location"
-        />
-        <input
-          className="house-input"
-          required
-          type="number"
-          value={garage}
-          onChange={(e) => setGarage(e.target.value)}
-          placeholder="number of garages"
-        />
-        <input
-          className="house-input"
-          required
-          type="number"
-          value={bedrooms}
-          onChange={(e) => setBedrooms(e.target.value)}
-          placeholder="number of bedrooms"
-        />
-        <input
-          className="house-input"
-          required
-          type="number"
-          value={bathrooms}
-          onChange={(e) => setBathrooms(e.target.value)}
-          placeholder="number of bathrooms"
-        />
-        <input
-          className="house-input"
-          required
-          type="number"
-          value={area}
-          onChange={(e) => setArea(e.target.value)}
-          placeholder="set area m2"
-        />
-        <input
-          className="house-input"
-          required
-          type="number"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          placeholder="set daily price"
-        />
+        <div className="form-item">
+          <label htmlFor="houseNameInput">
+            Enter house name:
+            <input
+              id="houseNameInput"
+              className="house-input"
+              required
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+        </div>
+
+        <div className="form-item">
+          <label htmlFor="style">
+            Enter house style:
+            <input
+              id="style"
+              className="house-input"
+              required
+              type="text"
+              value={style}
+              onChange={(e) => setStyle(e.target.value)}
+
+            />
+          </label>
+        </div>
+
+        <div className="form-item">
+          <label htmlFor="photo">
+            Enter photo URL:
+            <input
+              id="photo"
+              className="house-input"
+              required
+              type="text"
+              value={photo}
+              onChange={(e) => setPhoto(e.target.value)}
+
+            />
+          </label>
+        </div>
+
+        <div className="form-item">
+          <label htmlFor="location">
+            Enter location:
+            <input
+              id="location"
+              className="house-input"
+              required
+              type="text"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+
+            />
+          </label>
+        </div>
+
+        <div className="form-item">
+          <label htmlFor="garages">
+            Enter number of garages:
+            <input
+              id="garages"
+              className="house-input"
+              required
+              type="number"
+              value={garage}
+              onChange={(e) => setGarage(e.target.value)}
+
+            />
+          </label>
+        </div>
+
+        <div className="form-item">
+          <label htmlFor="bedrooms">
+            Enter number of bedrooms:
+            <input
+              id="bedrooms"
+              className="house-input"
+              required
+              type="number"
+              value={bedrooms}
+              onChange={(e) => setBedrooms(e.target.value)}
+
+            />
+          </label>
+        </div>
+
+        <div className="form-item">
+          <label htmlFor="bathrooms">
+            Enter number of bathrooms:
+            <input
+              id="bathrooms"
+              className="house-input"
+              required
+              type="number"
+              value={bathrooms}
+              onChange={(e) => setBathrooms(e.target.value)}
+
+            />
+          </label>
+        </div>
+
+        <div className="form-item">
+          <label htmlFor="area">
+            Enter house area:
+            <input
+              id="area"
+              className="house-input"
+              required
+              type="number"
+              value={area}
+              onChange={(e) => setArea(e.target.value)}
+
+            />
+          </label>
+        </div>
+
+        <div className="form-item">
+          <label htmlFor="price">
+            Enter daily price:
+            <input
+              id="price"
+              className="house-input"
+              required
+              type="number"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+            />
+          </label>
+        </div>
+
         <textarea
-          className="house-input"
+          className="text-area"
           required
           type="text"
           value={description}
@@ -142,7 +206,7 @@ const Form = () => {
         />
 
         <input
-          className=""
+          className="button"
           type="submit"
           value="Add house"
           title="Click this or press enter to submit"
@@ -168,15 +232,15 @@ const AddHouse = (props) => {
 
   return (
 
-    <div className="col-lg-8 p-0">
-      <div className="col-12">
-        <div className="box" />
+    <div className="main_cont">
+      <Link to="/home" className="home-button">
+        <AiFillHome style={{ color: 'white', fontSize: '36px' }} />
+      </Link>
+      <div className="internal_cont">
+        <img className="logo" src={logo} alt="gif" />
+        <h2 className="models-title">ADD A NEW HOUSE</h2>
+        <Form />
       </div>
-      <div className="col-12">
-        <div className="box" />
-      </div>
-      <h2 className="models-title">ADD A NEW HOUSE</h2>
-      <Form />
     </div>
   );
 };
