@@ -84,3 +84,20 @@ body {
 .swiper-nav-btn:hover {
   background-color: #004d40;
 }
+
+.detail-btn {
+  width: 160px;
+  background-color: #1c2331;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.detail-btn:hover {
+  background-color: #004d40;
+}
