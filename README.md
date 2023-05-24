@@ -37,7 +37,18 @@
  ## Cozy Homes Frontend User Interface
  
  ## About this project
+This web platform has been meticulously designed to offer users the ability to explore a diverse selection of houses, 
+providing them with the freedom to reserve properties based on their preferences. Additionally, users can also leverage 
+the platform to list their own properties, allowing other users to reserve them and generate extra income.
+To access the full range of features, users are encouraged to register an account, which grants them exclusive access to the website's 
+functionalities using a unique username. The application comprises two main components: the cozy-homes-back-end and the cozy-homes-front-end.
+The cozy-homes-back-end houses the API backend, responsible for managing and retrieving data from the database in response to requests made by the frontend.
+This component is built using the robust Ruby on Rails API framework, ensuring a secure and efficient backend infrastructure.
 
+On the other hand, the cozy-homes-front-end encompasses the captivating user interface of the website, providing an intuitive platform where users can 
+seamlessly interact with the database. Developed using cutting-edge technologies such as ReactJS and Redux, the frontend offers a seamless and engaging user experience.
+With the powerful combination of a Ruby on Rails API backend and a dynamic ReactJS and Redux frontend, this web application delivers a compelling and 
+feature-rich platform for users to explore, reserve, and list properties with utmost convenience and efficiency.
  
 ## 🛠 Built With <a name="built-with"></a>
 
