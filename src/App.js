@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import Houses from './pages/Houses';
 import Details from './pages/Details';
-import AddHouse from './components/AddHouse';
+import AddHouseTrue from './components/AddHouseTrue';
 import RemoveHouse from './components/RemoveHouse';
 import SplashLogin from './components/SplashLogin';
 import SplashSignup from './components/SplashSignup';
@@ -54,14 +54,14 @@ const App = () => {
         {location.pathname !== '/' && location.pathname !== '/signup' && <NavBar handleLogout={handleLogout} />}
       </div>
       <div className="col-lg-3 d-none d-lg-block p-0">
-        {location.pathname !== '/' && location.pathname !== '/signup' && location.pathname !== '/reserve' && <SideBar handleLogout={handleLogout} />}
+        {location.pathname !== '/' && location.pathname !== '/signup' && location.pathname !== '/reserve' && location.pathname !== '/add' && <SideBar handleLogout={handleLogout} />}
       </div>
       <Routes>
         <Route path="/" element={<SplashLogin SessionStatus={SessionStatus} />} />
         <Route path="/signup" element={<SplashSignup SessionStatus={SessionStatus} />} />
         <Route path="/home" element={<Houses SessionStatus={SessionStatus} />} />
         <Route path="/details/:name" element={<Details />} />
-        <Route path="/add" element={<AddHouse SessionStatus={SessionStatus} />} />
+        <Route path="/add" element={<AddHouseTrue SessionStatus={SessionStatus} />} />
         <Route path="/remove" element={<RemoveHouse SessionStatus={SessionStatus} />} />
         <Route path="/reserve" element={<AddReservation SessionStatus={SessionStatus} />} />
         <Route path="/reservations" element={<Reservations SessionStatus={SessionStatus} />} />

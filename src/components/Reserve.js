@@ -121,6 +121,7 @@ const AddReservations = (props) => {
                         )
                       }
             </select>
+
             <div className="d-block d-lg-flex mb-4">
               <DatePicker
                 className="select_house text-center"
