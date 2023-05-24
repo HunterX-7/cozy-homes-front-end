@@ -10,8 +10,8 @@
   background-size: cover;
 }
 
-.error-notification{
-  color: #ff0000;
+.error-notification {
+  color: rgb(255, 0, 0);
   text-align: center;
   word-wrap: break-word;
   font-size: 1rem;
@@ -83,8 +83,8 @@
     font-size: 1.5rem;
   }
 
-  .error-notification{
-    color: #ff0000;
+  .error-notification {
+    color: #f00;
     text-align: center;
     word-wrap: break-word;
   }
@@ -107,12 +107,12 @@
   }
 
   .username-input {
-    padding-left: 138px;;
+    padding-left: 138px;
     font-size: 1.5rem;
   }
 
-  .error-notification{
-    color: #ff0000;
+  .error-notification {
+    color: #f00;
     text-align: center;
     word-wrap: break-word;
   }

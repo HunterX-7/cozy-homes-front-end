@@ -10,8 +10,8 @@
   background-size: cover;
 }
 
-.error-notification{
-  color: #ff0000;
+.error-notification {
+  color: rgb(255, 0, 0);
   word-wrap: break-word;
 }
 
@@ -81,8 +81,8 @@
     font-size: 1.5rem;
   }
 
-  .error-notification{
-    color: #ff0000;
+  .error-notification {
+    color: #f00;
     word-wrap: break-word;
     text-align: center;
   }
@@ -109,8 +109,8 @@
     font-size: 1.5rem;
   }
 
-  .error-notification{
-    color: #ff0000;
+  .error-notification {
+    color: #f00;
     text-align: center;
     word-wrap: break-word;
   }
