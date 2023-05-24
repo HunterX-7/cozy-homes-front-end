@@ -197,9 +197,10 @@ This project was implemented using:
  
  ## 🔭 Future Features <a name="future-features"></a>
  
- - [ ] *Add animation to create smooth user experience.*
- - [ ] *Enable only admin users to add or delete houses.*
- - [ ] *Implement proper user authentication from the front-end to the server.*
+- [ ] **Add animation to create smooth user experience.**
+- [ ] **Enable only admin users to add or delete houses.**
+- [ ] **Implement proper user authentication from the front-end to the server.**
+- [ ] **Add unit and integration tests to ensure the app's integrity.**
  
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
@@ -225,10 +226,9 @@ This project was implemented using:
  
  ## 🙏 Acknowledgments <a name="acknowledgements"></a>
  
- We would like to thank:
- - [Murat Korkmaz](https://www.behance.net/muratk) for the Original Design Idea.
- - [Microverse](https://www.microverse.org/)
- - Coding Partners
+ We would like to give special thanks to:
+
+ [Murat Korkmaz](https://www.behance.net/muratk) for the Original Page Design Idea.
  
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
