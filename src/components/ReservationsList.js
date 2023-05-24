@@ -11,7 +11,6 @@ const ReservationsList = (props) => {
           id, user, house, startDate, endDate,
         } = res;
         return (
-
           <ReservationItem
             key={id}
             housename={house.name}

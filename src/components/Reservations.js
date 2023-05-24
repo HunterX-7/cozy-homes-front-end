@@ -53,9 +53,7 @@ const Reservations = (props) => {
           />
         </table>
       </div>
-
     </div>
-
   );
 };
 

@@ -5,7 +5,7 @@ import HouseRemoveItem from './HouseRemoveItem';
 const RemoveHouseList = (props) => {
   const { data } = props;
   return (
-    <div className="group">
+    <>
       {data.map((house) => {
         const {
           name, id,
@@ -18,7 +18,7 @@ const RemoveHouseList = (props) => {
           />
         );
       })}
-    </div>
+    </>
   );
 };
 

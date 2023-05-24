@@ -13,19 +13,23 @@ const HouseRemoveItem = (props) => {
   };
   return (
 
-    <div className="info">
-      <h2 className="card-name">
-        {name}
-        <span>{id}</span>
-      </h2>
-      <button
-        type="button"
-        className="del-btn"
-        onClick={() => deleteHandler(id)}
-      >
-        Remove
-      </button>
-    </div>
+    <tbody>
+      <tr>
+        <td className="my-auto text-center fs-4">
+          {name}
+          <span className="d-none">{id}</span>
+        </td>
+        <td className="text-center">
+          <button
+            type="button"
+            className="btn btn-sm btn-danger"
+            onClick={() => deleteHandler(id)}
+          >
+            X
+          </button>
+        </td>
+      </tr>
+    </tbody>
   );
 };
 
