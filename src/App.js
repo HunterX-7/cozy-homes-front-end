@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import Houses from './pages/Houses';
 import Details from './pages/Details';
-import AddHouse from './components/AddHouse';
+import AddHouseTrue from './components/AddHouseTrue';
 import RemoveHouse from './components/RemoveHouse';
 import SplashLogin from './components/SplashLogin';
 import SplashSignup from './components/SplashSignup';
@@ -61,7 +61,7 @@ const App = () => {
         <Route path="/signup" element={<SplashSignup SessionStatus={SessionStatus} />} />
         <Route path="/home" element={<Houses SessionStatus={SessionStatus} />} />
         <Route path="/details/:name" element={<Details />} />
-        <Route path="/add" element={<AddHouse SessionStatus={SessionStatus} />} />
+        <Route path="/add" element={<AddHouseTrue SessionStatus={SessionStatus} />} />
         <Route path="/remove" element={<RemoveHouse SessionStatus={SessionStatus} />} />
         <Route path="/reserve" element={<AddReservation SessionStatus={SessionStatus} />} />
         <Route path="/reservations" element={<Reservations SessionStatus={SessionStatus} />} />
