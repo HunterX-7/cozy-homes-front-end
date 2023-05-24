@@ -253,7 +253,7 @@ const AddHouse = (props) => {
   }, [dispatch, SessionStatus, navigate]);
 
   return (
-    
+
     <div className="main_cont">
       <Link to="/home" className="home-button">
         <AiFillHome style={{ color: 'white', fontSize: '36px' }} />

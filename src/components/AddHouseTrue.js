@@ -62,7 +62,7 @@ const Formulario = () => {
         <div className="d-flex justify-content-center mt-4">
           <img className="w-25" src={logotype} alt="gif" />
         </div>
-        <Form.Group>
+        <Form.Group className="p-2 text-center">
           <Form.Label className="text-white">House Name</Form.Label>
           <Form.Control
             type="text"
@@ -72,7 +72,7 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="p-2 text-center">
           <Form.Label className="text-white">House type</Form.Label>
           <Form.Control
             type="text"
@@ -82,7 +82,7 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="p-2 text-center">
           <Form.Label className="text-white">House photo</Form.Label>
           <Form.Control
             type="text"
@@ -92,7 +92,7 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="p-2 text-center">
           <Form.Label className="text-white">House address</Form.Label>
           <Form.Control
             type="text"
@@ -102,18 +102,26 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Form.Group>
-          <Form.Label className="text-white">House garages</Form.Label>
+        <Form.Group className="p-2 text-center">
+          <Form.Label className="text-white">
+            House garages
+            {' '}
+            <span className="text-secondary">(Numbers only field)</span>
+          </Form.Label>
           <Form.Control
-            type="text"
+            type="number"
             value={garage}
             onChange={(e) => setGarage(e.target.value)}
             placeholder="Enter house garages"
             required
           />
         </Form.Group>
-        <Form.Group>
-          <Form.Label className="text-white">House bedrooms</Form.Label>
+        <Form.Group className="p-2 text-center">
+          <Form.Label className="text-white">
+            House bedrooms
+            {' '}
+            <span className="text-secondary">(Numbers only field)</span>
+          </Form.Label>
           <Form.Control
             type="number"
             value={bedrooms}
@@ -122,8 +130,12 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Form.Group>
-          <Form.Label className="text-white">House bathrooms</Form.Label>
+        <Form.Group className="p-2 text-center">
+          <Form.Label className="text-white">
+            House bathrooms
+            {' '}
+            <span className="text-secondary">(Numbers only field)</span>
+          </Form.Label>
           <Form.Control
             type="number"
             value={bathrooms}
@@ -132,8 +144,12 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Form.Group>
-          <Form.Label className="text-white">Area mt2</Form.Label>
+        <Form.Group className="p-2 text-center">
+          <Form.Label className="text-white">
+            Area mt2
+            {' '}
+            <span className="text-secondary">(Numbers only field)</span>
+          </Form.Label>
           <Form.Control
             type="number"
             value={area}
@@ -142,8 +158,12 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Form.Group>
-          <Form.Label className="text-white">Daily price</Form.Label>
+        <Form.Group className="p-2 text-center">
+          <Form.Label className="text-white">
+            Daily price
+            {' '}
+            <span className="text-secondary">(Numbers only field)</span>
+          </Form.Label>
           <Form.Control
             type="number"
             value={price}
@@ -152,7 +172,7 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className="p-2 text-center">
           <Form.Label className="text-white">Description</Form.Label>
           <Form.Control
             className=""
@@ -163,9 +183,11 @@ const Formulario = () => {
             required
           />
         </Form.Group>
-        <Button variant="outline-light" type="submit">
-          Add House
-        </Button>
+        <Form.Group className="mb-3 mt-3 text-center">
+          <Button className="mx-auto" variant="outline-light" type="submit">
+            Add House
+          </Button>
+        </Form.Group>
       </Form>
     </>
   );
@@ -187,13 +209,16 @@ const AddHouseTrue = (props) => {
 
   return (
     <div className="h-100 custom-bg">
-      <div className="p-3">
+      <div className="d-none d-lg-block p-3">
         <Link to="/home">
           <AiFillHome style={{ color: 'white', fontSize: '36px' }} />
         </Link>
       </div>
+      <div className="d-lg-none col-12">
+        <div className="box" />
+      </div>
       <div className="row justify-content-center mb-5">
-        <div className="col-lg-6 rounded mb-5" style={{ backgroundColor: '#1c2331' }}>
+        <div className="col-lg-6 rounded mb-5 form-div">
           <Formulario />
         </div>
       </div>
