@@ -139,7 +139,7 @@ const Form = () => {
                     type="number"
                     value={garage}
                     onChange={(e) => setGarage(e.target.value)}
-                    placeholder="Enter num of garages:"
+                    placeholder="Num of garages:"
                   />
                 </div>
               </div>
@@ -157,7 +157,7 @@ const Form = () => {
                     type="number"
                     value={bedrooms}
                     onChange={(e) => setBedrooms(e.target.value)}
-                    placeholder="Enter num of bedrooms:"
+                    placeholder="Num of bedrooms:"
                   />
                 </div>
               </div>
@@ -173,7 +173,7 @@ const Form = () => {
                     type="number"
                     value={bathrooms}
                     onChange={(e) => setBathrooms(e.target.value)}
-                    placeholder="Enter num of bathrooms:"
+                    placeholder="Num of bathrooms:"
                   />
                 </div>
               </div>
@@ -253,7 +253,7 @@ const AddHouse = (props) => {
   }, [dispatch, SessionStatus, navigate]);
 
   return (
-
+    
     <div className="main_cont">
       <Link to="/home" className="home-button">
         <AiFillHome style={{ color: 'white', fontSize: '36px' }} />

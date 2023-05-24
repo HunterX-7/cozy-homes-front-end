@@ -4,14 +4,15 @@
 
 .main_cont {
   background-image: url("../images/reserve-bg.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  flex-direction: column;
 }
 
 .sides {
@@ -23,20 +24,21 @@
 .left-side {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin: 50px 20% 50px 20%;
+  gap: 15px;
+  margin: 20px 0 20px 0;
 }
 
 .right-side {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin: 50px 0 50px 0;
+  gap: 15px;
+  margin: 20px 0 20px 0;
 }
 
 .home-button {
-  padding: 3%;
+  padding: 7px;
   display: block;
+  margin: 15px 0px 0px 0px;
 }
 
 .internal_cont {
@@ -46,23 +48,22 @@
   flex-direction: column;
   align-content: center;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .logotype {
   width: 37%;
-  height: 100%;
   align-self: center;
   padding: 2px 0 30px 0;
 }
 
 .house-form {
-  width: 90%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-items: center;
   text-align: start;
   background-color: rgba(28, 35, 49, 0.7);
-  padding: 30px 30px 30px 30px;
   margin: 0 auto 0 auto;
   border-radius: 15px;
   box-sizing: border-box;
@@ -74,19 +75,18 @@
 
 .house-input {
   background-color: white;
-  font-size: large;
+  font-size: 1rem;
   color: black;
   border: none;
-  padding: 4px 10px 4px 10px;
 }
 
 .house-input-name {
   width: 100%;
   background-color: white;
-  font-size: large;
+  font-size: 1rem;
   color: black;
   border: none;
-  padding: 4px 80% 4px 10px;
+  padding: 4px 0 4px 10px;
   box-sizing: border-box;
 }
 
@@ -98,13 +98,15 @@
 }
 
 .border-green {
-  background-color: #004d40;
+  background-color: white;
+  border: 4px solid #004d40;
   padding: 8px;
   border-radius: 19px;
 }
 
 .border-grey-text {
-  width: 70%;
+  width: 52%;
+  height: 100px;
   background-color: #a6a6a6;
   padding: 5px;
   justify-content: center;
@@ -118,12 +120,14 @@
   color: black;
   border: none;
   box-sizing: border-box;
+  height: 75px;
   text-align: center;
 }
 
 .border-green-text {
   background-color: #004d40;
   padding: 8px;
+  height: 92px;
 }
 
 .border-grey-name {
@@ -139,16 +143,137 @@
   background: transparent;
   color: #ffc359;
   border: transparent;
-  margin-top: 30px;
   align-self: center;
   font-size: 2rem;
+  margin: 10px 0 10px 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 720px) {
+  .sides {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 20px;
+  }
+
   .left-side {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin: 50px 0 50px 0;
+    gap: 15px;
+    margin: 20px 0 0 0;
   }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0 20px 0;
+  }
+
+  .form-item {
+    width: 99%;
+  }
+
+  .border-grey {
+    width: 100%;
+    background-color: #a6a6a6;
+    padding: 3px;
+    border-radius: 20px;
+  }
+
+  .border-green {
+    background-color: white;
+    padding: 8px;
+    border-radius: 19px;
+    border: 3px solid #004d40;
+  }
+
+  .house-input {
+    background-color: white;
+    font-size: large;
+    color: black;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .house-input {
+    background-color: white;
+    font-size: large;
+    color: black;
+    border: none;
+  }
+
+  .internal_cont {
+    display: flex;
+    margin-right: 0;
+    padding: 0;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+}
+
+@media screen and (max-width: 500px) {
+  .sides {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0 0px 0;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px 0 20px 0;
+}
+
+.internal_cont {
+  display: flex;
+  margin-right: 0;
+  padding: 0;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+  .house-input-name {
+    background-color: white;
+    font-size: 0.8rem;
+    color: black;
+    border: none;
+  }
+
+  .house-input {
+    background-color: white;
+    font-size: 0.8rem;
+    color: black;
+    border: none;
+  }
+
+  .text-area {
+    width: 100%;
+    background-color: white;
+    font-size: 0.8rem;
+    color: black;
+    border: none;
+    box-sizing: border-box;
+    height: 75px;
+    text-align: center;
+  }
+  .button-add-house {
+    background: transparent;
+    color: #ffc359;
+    border: transparent;
+    align-self: center;
+    font-size: 1rem;
+    margin: 10px 0 10px 0;
+}
 }
