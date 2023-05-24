@@ -1,0 +1,119 @@
+.container-page {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../images/background-login3.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.error-notification {
+  color: rgb(255, 0, 0);
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 1rem;
+}
+
+.form-log {
+  height: 300px;
+  background-color: rgba(28, 35, 49, 0.9);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 90px 30px;
+  border: 1px solid #fff;
+}
+
+.logo-signin {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.border-grey {
+  background-color: #a6a6a6;
+  padding: 3px;
+  border-radius: 20px;
+}
+
+.border-green {
+  background-color: #004d40;
+  padding: 8px;
+  border-radius: 19px;
+}
+
+.username-input {
+  background-color: rgb(255, 255, 255);
+  padding: 0 0 0 10px;
+  margin: 1px 1px 1px 1px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.splash-action-btn {
+  background: transparent;
+  color: #ffc359;
+  border: transparent;
+  margin-top: 30px;
+  align-self: center;
+}
+
+@media screen and (min-width: 500px) {
+  .form-log {
+    height: 500px;
+    padding: 30px;
+  }
+
+  .logo-signin {
+    height: 180px;
+    margin-right: 0;
+  }
+
+  .splash-action-btn {
+    font-size: 1.7rem;
+    margin-top: 20px;
+  }
+
+  .username-input {
+    padding-left: 144px;
+    font-size: 1.5rem;
+  }
+
+  .error-notification {
+    color: #f00;
+    text-align: center;
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form-log {
+    height: 504px;
+    padding: 30px 100px 90px 100px;
+  }
+
+  .logo-signin {
+    height: 180px;
+    margin-right: 0;
+  }
+
+  .splash-action-btn {
+    font-size: 1.7rem;
+    margin-top: 20px;
+  }
+
+  .username-input {
+    padding-left: 138px;
+    font-size: 1.5rem;
+  }
+
+  .error-notification {
+    color: #f00;
+    text-align: center;
+    word-wrap: break-word;
+  }
+}
