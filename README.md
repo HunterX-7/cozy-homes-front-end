@@ -160,6 +160,9 @@ This project was implemented using:
  ## 📃 Kanban Board <a name="kanban-board"></a>
 
  The Kanban Board made for this project can be found [here](https://github.com/users/HunterX-7/projects/2).
+ 
+ You can see the initial status of our Kanban board [here](https://github.com/HunterX-7/cozy-homes-front-end/issues/10)
+
 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
