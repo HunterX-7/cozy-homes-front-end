@@ -40,7 +40,7 @@ const Formulario = () => {
     };
     dispatch(addHouse(house));
     e.target.reset();
-    navigate('/');
+    navigate('/home');
   };
 
   const resetForm = () => {

@@ -39,7 +39,7 @@ const HouseCarousel = (props) => {
               <p className="text-center">{description}</p>
               <div className="h4 w-100 mb-5 text-center">
                 <a
-                  href="https://github.com/HunterX-7/cozy-homes-front-end/tree/homepage-design"
+                  href="https://github.com/HunterX-7/cozy-homes-front-end"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -47,7 +47,7 @@ const HouseCarousel = (props) => {
                   <i className="px-2" />
                 </a>
                 <a
-                  href="https://github.com/HunterX-7/cozy-homes-front-end/tree/homepage-design"
+                  href="https://github.com/HunterX-7/cozy-homes-front-end"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -55,7 +55,7 @@ const HouseCarousel = (props) => {
                   <i className="px-2" />
                 </a>
                 <a
-                  href="https://github.com/HunterX-7/cozy-homes-front-end/tree/homepage-design"
+                  href="https://github.com/HunterX-7/cozy-homes-front-end"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
