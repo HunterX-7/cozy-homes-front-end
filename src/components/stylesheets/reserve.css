@@ -1,0 +1,111 @@
+.reserve-bg {
+  background-image: url('../images/reserve-bg.png');
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  max-width: 70%;
+  padding: 20px;
+  background-color: transparent;
+}
+
+.header {
+  text-align: center;
+}
+
+.line {
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.select_house {
+  margin-bottom: 10px;
+  padding: 3px;
+  border: 5px solid white;
+  border-radius: 25px;
+}
+
+.select_house2 {
+  margin-bottom: 10px;
+  padding: 3px;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 25px;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.status-notification {
+  margin-top: 20px;
+  color: #f00;
+}
+
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: fixed; /* Ensure equal column size */
+}
+
+.reservation-table th,
+.reservation-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.reservation-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.reservation-table tbody tr:hover {
+  background-color: #eaeaea;
+}
+
+@media screen and (max-width: 680px) {
+  .content {
+    max-width: 100%;
+  }
+
+  .form-container {
+    padding: 0 10px;
+  }
+
+  .select_house {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .reservation-table th,
+  .reservation-table td {
+    padding: 6px;
+  }
+
+  .header {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
